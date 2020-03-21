@@ -30,6 +30,7 @@
         "volume_size": 10,
         "volume_type": "gp2"
       },
+      "ena_support": true,
       "ami_virtualization_type": "hvm",
       "instance_type": "t3a.small",
       "ssh_username": "centos",
