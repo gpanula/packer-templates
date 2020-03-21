@@ -1,0 +1,29 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "eu-west-1",
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "name": "CentOS Linux 7 x86_64 HVM EBS ENA*",
+          "root-device-type": "ebs"
+        },
+        "owners": [
+          "679593333241"
+        ],
+        "most_recent": true
+      },
+      "instance_type": "t3a.small",
+      "ssh_username": "centos",
+      "ami_name": "centos-7-kernel-ml-x86_64-{{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "scripts/centos-7-mainline.sh",
+      "valid_exit_codes": [0,1]
+    }
+  ]
+}
