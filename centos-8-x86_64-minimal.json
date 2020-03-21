@@ -9,9 +9,6 @@
           "name": "centos-7-kernel-ml-x86_64-*",
           "root-device-type": "ebs"
         },
-        // "owners": [
-        //   "%YOUR_ACCOUNTID%"
-        // ],
         "most_recent": true
       },
 
